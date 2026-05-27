@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#qrText{
+    width: 100%;
+    padding: 1rem 0.6rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.Gen-btn{
+    width: 100%;
+    padding: 1rem;
+    font-size:1.2rem;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border-radius: 1rem;
+    /* transition: all 0.2s ease; */
+}
+
+.Gen-btn:hover{
+    /* transform: scale(0.9); */
+    background-color: darkgreen;
+    cursor: pointer;
+}

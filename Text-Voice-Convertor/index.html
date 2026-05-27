@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8cb011bcad.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+        color: aqua;
+    }
+    body{
+       background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("background.png");
+       background-size:contain;
+       background-position: center;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        height: 100vh;
+        width: 100%;
+        
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero h1{
+        text-align: center;
+    }
+    textarea{
+        background:transparent;
+        padding: 2rem;
+        display: flex;
+        font-size: 1.2rem;  
+        outline: none;
+        border: none;
+        resize: none; /*make the size to be fixed*/
+        border: 2px solid aqua;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px aqua;
+        background: rgba(0,0,0,0.1);
+    }
+
+    textarea::placeholder{
+        font-size: 1.2rem;
+        color: aqua;
+    }
+
+    div h1 span u{  /* thorugh location only we can make changes in color*/
+        color: rgb(150, 150, 46);
+        font-size: 2rem;
+    }
+    .bottom{
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        gap: 1rem;
+        
+    }
+    button{
+        width: 25%;
+        height: 2rem;
+        border-radius: 1rem;
+        background-color: red;
+    }
+    #dropdown{
+        width: 75%;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+        border: 2px solid #333;
+        color: white;
+        padding: 0 10px;
+        padding-right: 10px;
+        background: transparent;
+        /* it is present but not shown anything
+        appearance: none;
+         now placing image in place of that which makes effective
+        background-image: url(dropdown.png);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position:right;
+        background-position-x: calc(100%-20px); */
+        
+
+    }
+</style>
+
+<body>
+    <div class="hero">
+        <h1>Text To Speech <span><u>Convertor</u></span></h1>
+
+        <textarea name="textarea" id="textarea" cols="70" rows="10" placeholder="Enter Text Here"></textarea>
+        
+
+        <div class="bottom">
+            <select name="dropdown" id="dropdown">
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+         
+            <button id="btn" > <i class="fa-solid fa-play"></i> Listen</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

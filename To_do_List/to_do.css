@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.top-left{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.to_do_image{
+    height: 70px;
+}
+
+.title-logo{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0; /* light grey color -> good to use*/
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1; /* it will take all the available space*/
+
+    /* Good to use this border:none and outline: none and also background:transparent to make effectiveness  in code visualization..*/
+
+    border: none; /* to remove the border of input box*/
+    outline: none; /* to remove the outline of input box*/
+    background: transparent; /* this will remove the whiteness of placing of text*/
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5c4a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+ul li{
+    list-style: none;
+    padding: 18px 8px 15px 50px;
+    font-size: 1rem;
+    user-select: none; /* We can't able to select it(can't copy it)*/
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content:  '';
+    position: absolute; /* used because of overlapping of another image here*/
+    /* this height and width is used to make it circle -> depending upon this only the circle back-ground image sense -> customly you can change the change and height depending upin that it'ill make sense of thi*/
+    height: 30px; 
+    width: 30px;
+    /* to make it circle and in this circle you need to insert that image*/
+    border-radius: 50%; 
+    background-image: url('unchecked.png');
+    background-size: cover; /* cover means it will cover the entire area of the circle*/
+    background-position: center;/* center means it will place the image in center of the circle*/
+    
+    /* to place it in the left side of the text*/
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before{
+    background-image: url('checked.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    /* to get the cross in center -> we used this line-height and text-align*/
+    line-height: 40px; 
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(228, 221, 222);
+}
+
+ul li span:hover{
+    background-color: #edeef0;
+}
+

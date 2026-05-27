@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+    color: aqua;
+    word-spacing: 0.1rem;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(background1.png.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero p{
+    font-size: 1.5rem;
+}
+
+
+.hero h1{
+    font-size: 4rem;
+}
+
+.hero h1 span{
+    color: violet;
+}
+
+.hero button{
+    width: 8rem;
+    padding: 0.7rem 0.5rem;
+    background:transparent;
+    border: 1px solid aqua;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rocket{
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s ease-in-out infinite;
+
+
+
+
+    /* Very good the background is removed by using of below line*/
+     mix-blend-mode: screen;   /* removes black background */
+
+
+
+
+}
+
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 100%;
+        opacity: 1;
+    }
+}
